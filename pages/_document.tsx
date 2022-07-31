@@ -1,0 +1,46 @@
+import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
+import React from 'react';
+import { ServerStyleSheet } from 'styled-components';
+
+export default class _Document extends Document {
+  static async getInitialProps(ctx: DocumentContext):Promise<DocumentInitialProps> {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+
+      return {
+        ...initialProps,
+        styles: [initialProps.styles, sheet.getStyleElement()],
+      };
+    } finally {
+      sheet.seal();
+    }
+  }
+
+  render() {
+    return (
+      <Html lang='ru'>
+        <Head>
+          {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> */}
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+          <link href="https://unpkg.com/open-props/easings.min.css" rel='stylesheet' />
+          <Script src='/theme.js' strategy='beforeInteractive' />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}

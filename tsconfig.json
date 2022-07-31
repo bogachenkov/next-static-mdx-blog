@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "types": [
+      "jest",
+      "@testing-library/jest-dom",
+    ],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@generated/*": [
+        "generated/*"
+      ],
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@queries/*": [
+        "queries/*"
+      ],
+      "@markdown": [
+        "libs/markdown/index.ts"
+      ],
+      "@mdx-elements": [
+        "libs/mdx-elements/index.ts"
+      ],
+      "@ui/*": [
+        "libs/ui/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.config.js"  
+  ],
+  "exclude": [
+    "node_modules/cypress",
+    "cypress",
+    "./cypress.config.ts"
+  ]
+}
