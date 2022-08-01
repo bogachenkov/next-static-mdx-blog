@@ -3,7 +3,7 @@ import { StyledTitle } from './styled';
 
 interface ITitleProps {
   size?: number;
-  level?: number;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
   children?: React.ReactNode;
 }
 

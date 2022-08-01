@@ -7,7 +7,7 @@ import { Article } from 'types/article';
 import { StyledArticleExcerpt, StyledArticleReadMore, StyledArticlePreview } from './styled';
 
 interface IArticlePreviewProps {
-  article: Article;
+  article: Partial<Article>;
 }
 
 const ArticlePreview:React.FC<IArticlePreviewProps> = ({

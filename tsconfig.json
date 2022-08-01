@@ -25,9 +25,6 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@generated/*": [
-        "generated/*"
-      ],
       "@modules/*": [
         "modules/*"
       ],
@@ -36,9 +33,6 @@
       ],
       "@public/*": [
         "public/*"
-      ],
-      "@queries/*": [
-        "queries/*"
       ],
       "@markdown": [
         "libs/markdown/index.ts"

@@ -4,7 +4,7 @@ interface IProps {
   children?: React.ReactNode;
 }
 
-type ColorTheme = 'dark' | 'light';
+export type ColorTheme = 'dark' | 'light';
 interface IThemeContext {
   theme: ColorTheme;
   switchTheme: VoidFunction;
