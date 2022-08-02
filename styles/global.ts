@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     --theme-transition-duration: .45s;
 
     --container-padding: 20px;
+    --body-padding: 80px;
 
     font-size: 9px;
     font-family: Inter, Helvetica, -apple-system, sans-serif;
@@ -32,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--color-body);
     color: var(--color-text);
     transition: background-color var(--theme-transition-duration), color var(--theme-transition-duration);
-    padding-bottom: 80px;
+    padding-bottom: var(--body-padding);
   }
 `;
 

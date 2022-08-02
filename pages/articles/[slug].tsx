@@ -16,7 +16,7 @@ export interface UrlParams extends ParsedUrlQuery {
   slug?: string;
 };
 
-export function Article({ frontMatter, code }: MarkdownRenderingResult) {
+function Article({ frontMatter, code }: MarkdownRenderingResult) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
 
   const articleCategory = {

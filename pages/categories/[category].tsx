@@ -18,7 +18,7 @@ interface Props {
   articles: Article[];
 }
 
-export function Category({ category, articles }: Props) {
+function Category({ category, articles }: Props) {
   return (
     <div>
       <HomeHero>
