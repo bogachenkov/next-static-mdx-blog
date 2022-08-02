@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --header-height: 80px;
+    --header-height: 50px;
     --theme-transition-duration: .45s;
 
     --container-padding: 20px;
@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media screen and (min-width: 768px) {
       font-size: 10px;
+      --header-height: 80px;
     }
 
     ${Object.entries(COLORS).map(([name, color]) => {

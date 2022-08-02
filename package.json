@@ -13,6 +13,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@bogachenkov/react-scrolling-progress": "^1.0.1",
     "@mantine/hooks": "^4.2.11",
     "dayjs": "^1.11.3",
     "esbuild": "^0.14.48",

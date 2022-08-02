@@ -1,3 +1,4 @@
+import { StyledGithubIcon } from '@ui/GithubIcon/styled';
 import styled from 'styled-components';
 
 export const StyledHeader = styled.nav`
@@ -10,4 +11,15 @@ export const StyledHeader = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &  ${StyledGithubIcon} {
+    
+    height: 28px;
+    width: 28px;
+
+    @media (hover: none) {
+      height: 22px;
+      width: 22px;
+    }
+  }
 `;

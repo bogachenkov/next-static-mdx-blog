@@ -18,7 +18,7 @@ export const StyledSwitchButton = styled.button`
   outline-offset: 5px;
 
   @media (hover: none) {
-    --size: 3.2rem;
+    --size: 2.5rem;
   }
 `;
 
