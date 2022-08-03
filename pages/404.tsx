@@ -1,12 +1,18 @@
 import NotFound from '@modules/NotFound';
 import Container from '@ui/Container';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const NotFoundPage:NextPage = () => {
   return (
-    <Container>
-      <NotFound />
-    </Container>
+    <>
+      <Head>
+        <title>Page Not Found - 404</title>
+      </Head>
+      <Container>
+        <NotFound />
+      </Container>
+    </>
   );
 }
 

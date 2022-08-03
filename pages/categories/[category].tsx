@@ -7,6 +7,7 @@ import Title from "@ui/Title";
 import { Article } from "types/article";
 import ArticlesList from "@modules/ArticlesList";
 import { capitalize } from "libs/utils";
+import Head from "next/head";
 
 /* eslint-disable-next-line */
 export interface UrlParams extends ParsedUrlQuery {
@@ -20,7 +21,10 @@ interface Props {
 
 function Category({ category, articles }: Props) {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Category - {category}</title>
+      </Head>
       <HomeHero>
         <Title level={1} size={32}>
           {category}
@@ -29,7 +33,7 @@ function Category({ category, articles }: Props) {
       <Container>
         <ArticlesList articles={articles} noTitle />
       </Container>
-    </div>
+    </>
   );
 }
 
