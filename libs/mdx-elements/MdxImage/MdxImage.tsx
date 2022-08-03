@@ -10,7 +10,7 @@ interface IMdxImageProps extends ImageProps {
 const MdxImage:React.FC<IMdxImageProps> = (props) => {
   return (
     <MediaWrapper>
-      <StyledMdxImage layout='fill' objectFit='cover' {...props} />
+      <StyledMdxImage loading='eager' layout='fill' objectFit='cover' {...props} />
     </MediaWrapper>
   );
 }
