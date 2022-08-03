@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledMediaWrapper = styled.span`
   display: block;
+  position: relative;
   width: 90%;
   max-width: 860px;
   margin: 4em auto;
