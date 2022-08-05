@@ -8,7 +8,7 @@ interface IContainerProps {
 
 const Container:React.FC<IContainerProps> = ({ size, children }) => {
   return (
-    <StyledContainer style={{
+    <StyledContainer data-testid="container" style={{
       ...size && {['--container-size' as string]: `${size}px`}
     }}>
       {children}

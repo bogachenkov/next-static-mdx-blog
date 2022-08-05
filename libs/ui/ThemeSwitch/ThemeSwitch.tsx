@@ -11,7 +11,7 @@ const ThemeSwitch:React.FC<IThemeSwitchProps> = ({ colorTheme }) => {
   const { theme, switchTheme } = useContext(ThemeContext);
 
   return (
-    <StyledSwitchButton onClick={switchTheme} title='Switch Theme' aria-label='auto' aria-live='polite' data-theme={colorTheme ?? theme }>
+    <StyledSwitchButton onClick={switchTheme} title='Switch Theme' aria-label='auto' aria-live='polite' data-testid="switch-button" data-theme={colorTheme ?? theme }>
       <StyledSwitchIcon aria-hidden width={24} height={24} viewBox="0 0 24 24">
         <circle id="switch-sun" cx={12} cy={12} r={6} mask={'url(#switch-moon)'} fill="currentColor" />
         <g id="switch-beams" stroke="currentColor">

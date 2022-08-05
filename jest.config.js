@@ -14,7 +14,15 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: [
     '<rootDir>/jest/support/setupTest.ts'
-  ]
+  ],
+  moduleNameMapper: {
+    '^@modules/(.*)': '<rootDir>/modules/$1',
+    '^@pages/(.*)': '<rootDir>/pages/$1',
+    '^@public/(.*)': '<rootDir>/public/$1',
+    '^@markdown/(.*)': '<rootDir>/libs/markdown/$1',
+    '^@mdx-elements/(.*)': '<rootDir>/libs/mdx-elements/$1',
+    '^@ui/(.*)': '<rootDir>/libs/ui/$1',
+  }
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

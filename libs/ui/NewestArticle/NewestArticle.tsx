@@ -4,13 +4,13 @@ import Link from 'next/link';
 import React from 'react';
 import { ArrowRight } from 'tabler-icons-react';
 import { Article } from 'types/article';
-import { StyledArticleExcerpt, StyledArticleReadMore, StyledArticlePreview } from './styled';
+import { StyledArticleExcerpt, StyledArticleReadMore, StyledNewestArticle } from './styled';
 
-interface IArticlePreviewProps {
+interface INewestArticleProps {
   article: Partial<Article>;
 }
 
-const ArticlePreview:React.FC<IArticlePreviewProps> = ({
+const NewestArticle:React.FC<INewestArticleProps> = ({
   article: {
     slug,
     title,
@@ -18,10 +18,10 @@ const ArticlePreview:React.FC<IArticlePreviewProps> = ({
   }
 }) => {
   return (
-    <StyledArticlePreview>
+    <StyledNewestArticle>
       <Badge>NEW</Badge>
       <Title level={3}>{title}</Title>
-      <StyledArticleExcerpt>
+      <StyledArticleExcerpt data-testid='article-excerpt'>
         {excerpt}
       </StyledArticleExcerpt>
       <Link href={`/articles/${slug}`} passHref>
@@ -29,8 +29,8 @@ const ArticlePreview:React.FC<IArticlePreviewProps> = ({
           Read more <ArrowRight size={14} />
         </StyledArticleReadMore>
       </Link>
-    </StyledArticlePreview>
+    </StyledNewestArticle>
   );
 }
 
-export default ArticlePreview;
+export default NewestArticle;

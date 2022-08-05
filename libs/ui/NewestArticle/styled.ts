@@ -2,7 +2,7 @@ import { StyledArticleWrapLink } from '@ui/ArticleWrapLink/styled';
 import { StyledTitle } from '@ui/Title/styled';
 import styled from 'styled-components';
 
-export const StyledArticlePreview = styled.article`
+export const StyledNewestArticle = styled.article`
   width: 100%;
   max-width: 640px;
 

@@ -1,12 +1,12 @@
-import ArticlePreview from './ArticlePreview';
+import NewestArticle from './NewestArticle';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
-  title: 'ui/ArticlePreview',
-  component: ArticlePreview,
-} as ComponentMeta<typeof ArticlePreview>;
+  title: 'ui/NewestArticle',
+  component: NewestArticle,
+} as ComponentMeta<typeof NewestArticle>;
 
-const Template:ComponentStory<typeof ArticlePreview> = (args) => <ArticlePreview {...args} />;
+const Template:ComponentStory<typeof NewestArticle> = (args) => <NewestArticle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

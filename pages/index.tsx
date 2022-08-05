@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Container from '@ui/Container';
 import HomeHero from '@modules/HomeHero';
 import MainContent from '@modules/MainContent';
-import ArticlePreview from '@ui/ArticlePreview';
+import NewestArticle from '@ui/NewestArticle';
 import { getAllArticles, getAllCategories } from 'libs/articles';
 import { Article } from 'types/article';
 import ArticleWrapLink from '@ui/ArticleWrapLink';
@@ -30,7 +30,7 @@ const Home: NextPage<Props>= ({ articles, categories }) => {
       </Head>
       <HomeHero>
         <ArticleWrapLink slug={articles[0].slug}>
-          <ArticlePreview article={articles[0]} />
+          <NewestArticle article={articles[0]} />
         </ArticleWrapLink>
       </HomeHero>
       <MainContent>

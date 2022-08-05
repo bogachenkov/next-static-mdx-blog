@@ -4,16 +4,16 @@ import { StyledArticleCard, StyledArticleDate, StyledArticleExcerpt } from './st
 import dayjs from 'dayjs';
 import Title from '@ui/Title';
 
-const ArticleCard:React.FC<Article> = ({
+const ArticleCard:React.FC<Partial<Article>> = ({
   title,
   date,
   excerpt
 }) => {
   return (
     <StyledArticleCard>
-      <StyledArticleDate>{dayjs(date).format('DD MMMM YYYY')}</StyledArticleDate>
+      <StyledArticleDate data-testid="article-date">{dayjs(date).format('DD MMMM YYYY')}</StyledArticleDate>
       <Title level={3}>{title}</Title>
-      <StyledArticleExcerpt>
+      <StyledArticleExcerpt data-testid='article-excerpt'>
         {excerpt}
       </StyledArticleExcerpt>
     </StyledArticleCard>
