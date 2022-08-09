@@ -18,9 +18,9 @@ const NewestArticle:React.FC<INewestArticleProps> = ({
   }
 }) => {
   return (
-    <StyledNewestArticle>
+    <StyledNewestArticle data-cy='newest-article'>
       <Badge>NEW</Badge>
-      <Title level={3}>{title}</Title>
+      <Title level={3} data-cy='newest-article-title'>{title}</Title>
       <StyledArticleExcerpt data-testid='article-excerpt'>
         {excerpt}
       </StyledArticleExcerpt>

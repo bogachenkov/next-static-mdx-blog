@@ -17,7 +17,7 @@ const Categories:React.FC<ICategoriesProps> = ({ categories }) => {
       <StyledCategoriesGroup>
         {categories.map(({ label, uri }) => (
           <Link key={uri} href={`/categories/${uri}`}>
-            <a>
+            <a data-cy="category-link">
               <Tag>{label}</Tag>
             </a>
           </Link>
