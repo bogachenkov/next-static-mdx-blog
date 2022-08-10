@@ -34,7 +34,7 @@ export default class _Document extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> */}
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
           <link href="https://unpkg.com/open-props/easings.min.css" rel='stylesheet' />
-          <Script src='/theme.js' strategy='beforeInteractive' />
+          <Script src='/script.js' strategy='beforeInteractive' />
         </Head>
         <body>
           <Main />

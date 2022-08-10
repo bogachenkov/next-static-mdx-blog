@@ -1,5 +1,4 @@
 import React, { createContext, useCallback, useEffect, useMemo, useState } from 'react';
-
 interface IProps {
   children?: React.ReactNode;
 }
@@ -33,16 +32,18 @@ const ThemeProvider:React.FC<IProps> = ({ children }) => {
   const [colorTheme, setColorTheme] = useState<ColorTheme>('light');
 
   const toggleColorScheme = useCallback(() => {
-    setColorTheme((theme) => {
-      const newTheme = theme === 'dark' ? 'light' : 'dark';
-      window.localStorage.setItem('prefered-theme', newTheme);
+    setColorTheme((currentMode) => {
+      const updatedMode = currentMode === 'dark' ? 'light' : 'dark';
+      window.localStorage.setItem('prefered-theme', updatedMode);
+
       // @ts-ignore
-      const colors = window.THEME_COLORS as IThemes;
-      for (let styleKey in colors[newTheme]) {
+      const themes: IThemes = window.app_color_themes;
+      const colors = themes[updatedMode];
+      for (let styleKey in colors) {
         // @ts-ignore
-        document.querySelector('html')!.style.setProperty('--color-' + styleKey, colors[newTheme][styleKey]);
+        document.querySelector('html')!.style.setProperty('--color-' + styleKey, colors[styleKey]);
       }
-      return newTheme;
+      return updatedMode;
     });
   }, []);
 

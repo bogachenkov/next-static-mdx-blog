@@ -1,4 +1,3 @@
-import { COLORS } from "./colors";
 import { createGlobalStyle } from "styled-components";
 import { normalize } from 'styled-normalize';
 
@@ -23,10 +22,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 10px;
       --header-height: 80px;
     }
-
-    ${Object.entries(COLORS).map(([name, color]) => {
-      return `--color-${name}: ${color};\n`;
-    })}
   }
 
   body {
