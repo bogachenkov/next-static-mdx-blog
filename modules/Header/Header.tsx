@@ -15,8 +15,6 @@ interface IHeaderProps {
 const Header:React.FC<IHeaderProps> = (props) => {
   const router = useRouter();
   
-  console.log();
-
   return (
     <StyledHeader>
       {
