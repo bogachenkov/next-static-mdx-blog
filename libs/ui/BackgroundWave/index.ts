@@ -1,1 +1,3 @@
-export { default } from './BackgroundWave';
+import dynamic from 'next/dynamic'
+
+export default dynamic(() => import('./BackgroundWave'));

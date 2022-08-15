@@ -6,6 +6,7 @@ import ThemeProvider from 'libs/context/ThemeProvider'
 
 import GlobalStyle from 'styles/global'
 import '../styles/prism-theme.css';
+import '../styles/easings.min.css';
 
 interface CustomAppProps extends AppProps {}
 

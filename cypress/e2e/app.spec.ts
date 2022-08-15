@@ -2,6 +2,7 @@ context("Navigation", () => {
   describe('Clicking the article', () => {
     it('should navigate to the article page', () => {
       cy.visit('/');
+      expect(2).to.eq(2);
   
       cy.get('[data-cy="newest-article-title"]').then($title => {
         const title = $title.text();

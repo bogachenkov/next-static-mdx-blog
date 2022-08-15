@@ -3,10 +3,10 @@ import GithubIcon from '@ui/GithubIcon';
 import Group from '@ui/Group';
 import Logo from '@ui/Logo';
 import ThemeSwitch from '@ui/ThemeSwitch';
-import React from 'react';
+import React, { lazy } from 'react';
 import { StyledHeader } from './styled';
-import ScrollProgress from "@bogachenkov/react-scrolling-progress";
 import { useRouter } from 'next/router';
+const ScrollProgress = lazy(() => import("@bogachenkov/react-scrolling-progress"));
 
 interface IHeaderProps {
   children?: React.ReactNode;
