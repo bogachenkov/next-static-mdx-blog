@@ -26,7 +26,7 @@ const ThemeSwitch:React.FC<IThemeSwitchProps> = ({ colorTheme }) => {
         </g>
         <mask id="switch-moon">
           <rect x={0} y={0} width="100%" height="100%" fill="white" />
-          <circle cx={24} cy={10} r={6} fill="currentColor" />
+          <circle cx={24} cy={10} r={6} fill="rgb(0, 0, 0)" />
         </mask>
       </StyledSwitchIcon>
     </StyledSwitchButton>
