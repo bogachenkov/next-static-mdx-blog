@@ -9,7 +9,7 @@ interface IMdxLinkProps extends LinkProps {
 const MdxLink:React.FC<IMdxLinkProps> = ({ children, ...props }) => {
   return (
     <Link {...props} passHref>
-      <LinkWrap>{children}</LinkWrap>
+      <LinkWrap target={'_blank'}>{children}</LinkWrap>
     </Link>
   );
 }
