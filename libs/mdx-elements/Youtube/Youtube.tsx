@@ -13,6 +13,7 @@ const Youtube:React.FC<IYoutubeProps> = (props) => {
     <MediaWrapper>
       <StyledIframe 
         src={`https://www.youtube.com/embed/${props.uid}`}
+        loading='lazy'
         title={props.title}
       />
     </MediaWrapper>

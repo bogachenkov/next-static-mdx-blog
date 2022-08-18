@@ -8,5 +8,5 @@ export const mdxElements = {
   img: MdxImage,
   blockquote: Blockquote,
   pre: dynamic(() => import('./PreBlock'), { ssr: false }),
-  Youtube: dynamic(() => import('./Youtube'))
+  Youtube: dynamic(() => import('./Youtube'), { ssr: false })
 }

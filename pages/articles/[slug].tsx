@@ -12,6 +12,7 @@ import Head from "next/head";
 import ArticleWrapper from "@modules/ArticleWrapper";
 import ArticleGrid from "@modules/ArticleGrid";
 import ArticleMeta from "@modules/ArticleMeta";
+import ErrorBoundary from "libs/boundary/ErrorBoundary";
 export interface UrlParams extends ParsedUrlQuery {
   slug?: string;
 };
@@ -25,7 +26,7 @@ function Article({ frontMatter, code }: MarkdownRenderingResult) {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>{frontMatter.title}</title>
       </Head>
@@ -35,15 +36,17 @@ function Article({ frontMatter, code }: MarkdownRenderingResult) {
         </Title>
       </HomeHero>
       <Container>
-        <ArticleGrid>
-          <ArticleMeta category={articleCategory} date={frontMatter.date} />
-          <ArticleWrapper>
-            {/* @ts-ignore */}
-            <Component components={mdxElements} />
-          </ArticleWrapper>
-        </ArticleGrid>
+        <ErrorBoundary>
+          <ArticleGrid>
+            <ArticleMeta category={articleCategory} date={frontMatter.date} />
+            <ArticleWrapper>
+              {/* @ts-ignore */}
+              <Component components={mdxElements} />
+            </ArticleWrapper>
+          </ArticleGrid>
+        </ErrorBoundary>
       </Container>
-    </div>
+    </>
   );
 }
 

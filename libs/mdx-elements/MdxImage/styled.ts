@@ -6,4 +6,6 @@ export const StyledMdxImage = styled(Image)`
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: filter .3s linear;
+  filter: blur(var(--image-blur));
 `;
