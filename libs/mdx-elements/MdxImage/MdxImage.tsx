@@ -15,7 +15,8 @@ const MdxImage:React.FC<IMdxImageProps> = (props) => {
       <StyledMdxImage 
         style={{ ['--image-blur' as string]: blur ? '20px' : 0 }} 
         loading='lazy' 
-        onLoadingComplete={() => setBlur(false)} 
+        onLoadingComplete={() => setBlur(false)}
+        sizes="100vw"
         {...props}
       />
     </MediaWrapper>
