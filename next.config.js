@@ -8,6 +8,11 @@ const nextConfig = {
   env: {
     articleMarkdownPath: '_articles',
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
 }
 
 module.exports = nextConfig

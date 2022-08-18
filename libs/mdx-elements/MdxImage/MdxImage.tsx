@@ -1,4 +1,4 @@
-import { ImageProps } from 'next/image';
+import { ImageProps } from 'next/future/image';
 import React from 'react';
 import MediaWrapper from '../MediaWrapper';
 import { StyledMdxImage } from './styled';
@@ -10,7 +10,7 @@ interface IMdxImageProps extends ImageProps {
 const MdxImage:React.FC<IMdxImageProps> = (props) => {
   return (
     <MediaWrapper>
-      <StyledMdxImage loading='eager' layout='fill' objectFit='cover' {...props} />
+      <StyledMdxImage loading='eager' {...props} />
     </MediaWrapper>
   );
 }
